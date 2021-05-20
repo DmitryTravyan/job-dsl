@@ -1,0 +1,19 @@
+---
+# DevZones
+cluster-1:
+  label: "cluster-1"
+  description: "Sandbox zone"
+# Test Zones
+cluster-2:
+  label: "cluster-2"
+  description: "Cluster for functional testing"
+cluster-3:
+  label: "cluster-3"
+  description: "Cluster for stress testing"
+# ProductionZones
+cluster-4:
+  label: "cluster-4"
+  description: "Production cluster"
+cluster-5:
+  label: "cluster-5"
+  description: "Production cluster"

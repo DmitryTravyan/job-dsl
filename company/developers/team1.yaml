@@ -1,0 +1,19 @@
+products:
+  - name: "foo-app"
+    gitlab_id: 1569
+    deploy_type: 'helm'
+    permissions:
+      - groups: ["authenticated"]
+        rules: ["hudson.model.Item.Read"]
+  - name: "bar-app"
+    gitlab_id: 1569
+    deploy_type: 'helm'
+    permissions:
+      - groups: ["authenticated"]
+        rules: ["hudson.model.Item.Read"]
+  - name: "bazz-app"
+    gitlab_id: 66
+    deploy_type: 'helm'
+    permissions:
+      - groups: ["authenticated"]
+        rules: ["hudson.model.Item.Read"]

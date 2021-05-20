@@ -1,0 +1,20 @@
+
+products:
+  - name: integrator-app
+    gitlab_id: 3416
+    deploy_type: tarantool
+    permissions:
+    - groups: [authenticated]
+      rules: [hudson.model.Item.Read]
+  - name: tarantool-app
+    gitlab_id: 3206
+    deploy_type: tarantool
+    permissions:
+    - groups: [authenticated]
+      rules: [hudson.model.Item.Read]
+  - name: shopingcart-app
+    gitlab_id: 3555
+    deploy_type: tarantool
+    permissions:
+    - groups: [authenticated]
+      rules: [hudson.model.Item.Read]

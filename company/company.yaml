@@ -1,0 +1,11 @@
+permissions:
+  - groups: ["authenticated", "anonymous"]
+    rules: ["hudson.model.Item.Read"]
+  - groups: ["mfactory-all-devops", "unix-bssgf-auto-mgf-adm"]
+    rules: ['hudson.model.Item.Read',
+            'hudson.model.Item.Cancel',
+            'hudson.model.View.Create',
+            'hudson.model.View.Delete',
+            'hudson.model.View.Configure',
+            'hudson.model.View.Read']
+description: "test description"

@@ -1,0 +1,19 @@
+---
+# DevZones
+server-1:
+  label: "server-1"
+  description: "Sandbox zone"
+# Test Zones
+server-2:
+  label: "server-2"
+  description: "Server for functional testing"
+server-3:
+  label: "server-3"
+  description: "Server for stress testing"
+# ProductionZones
+server-4:
+  label: "server-4"
+  description: "Server server"
+server-5:
+  label: "server-5"
+  description: "Server server"

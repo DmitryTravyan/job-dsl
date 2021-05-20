@@ -1,0 +1,68 @@
+---
+products:
+  - name: "zero-php-app"
+    gitlab_id: 3226
+    deploy_type: 'helm'
+    permissions:
+      - groups: ["authenticated"]
+        rules: ["hudson.model.Item.Read"]
+  - name: "zero-cpp-app"
+    gitlab_id: 3379
+    deploy_type: 'helm'
+    permissions:
+      - groups: ["authenticated"]
+        rules: ["hudson.model.Item.Read"]
+  - name: "test-project-ruby"
+    gitlab_id: 3464
+    deploy_type: 'helm'
+    permissions:
+      - groups: ["authenticated"]
+        rules: ["hudson.model.Item.Read"]
+  - name: "test-project-ruby-worker"
+    gitlab_id: 3549
+    deploy_type: 'helm'
+    zones:
+      kubernetes:
+        - "cluster-3"
+  - name: "test-project-ruby-web"
+    gitlab_id: 3550
+    deploy_type: 'helm'
+    permissions:
+      - groups: ["authenticated"]
+        rules: ["hudson.model.Item.Read"]
+    parameters:
+      days_to_keep: "1"
+      num_to_keep: "1"
+    filter_expr: "(^Push Hook false none none$)"
+    description: "not for production"
+
+zones:
+  kubernetes:
+    - "cluster-1"
+    - "cluster-2"
+  tarantool:
+    - "kappa"
+    - "betta"
+
+description: "rawdata team folder"
+
+permissions:
+  - groups: ["authenticated", "anonymous"]
+    rules: ["hudson.model.Item.Read"]
+  - groups: ["all-devops", "all-developers"]
+    rules: ['hudson.model.Item.Read',
+            'hudson.model.Item.Cancel',
+            'hudson.model.View.Create',
+            'hudson.model.View.Delete',
+            'hudson.model.View.Configure',
+            'hudson.model.View.Read']
+
+use_sandbox: false
+
+parameters:
+  days_to_keep: '100'
+  num_to_keep: '30'
+
+script:
+  ci_path: "configuration/projects/scripts/master/ci-job.groovy"
+  cd_path: "configuration/projects/scripts/master/ci-job.groovy"

@@ -1,0 +1,17 @@
+products:
+  - name: "job-dsl"
+    gitlab_id: 1569
+    deploy_type: 'jenkinsfile'
+    sshUrl: "git@github.com:DmitryTravyan/job-dsl.git"
+    parameters:
+      - parameterName: "test"
+        defaultValue: null
+        description: "my specific param"
+
+  - name: "foo-app"
+    gitlab_id: 2277
+    deploy_type: 'tarantool'
+
+  - name: "bazz-app"
+    gitlab_id: 1999
+    deploy_type: 'tarantool'

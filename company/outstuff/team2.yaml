@@ -1,0 +1,28 @@
+
+products:
+  - name: zero-app
+    gitlab_id: 2928
+    deploy_type: helm
+    permissions:
+    - groups: [authenticated]
+      rules: [hudson.model.Item.Read]
+  - name: provider-app
+    gitlab_id: 3150
+    deploy_type: helm
+    permissions:
+    - groups: [authenticated]
+      rules: [hudson.model.Item.Read]
+  - name: info-app
+    gitlab_id: 3143
+    deploy_type: helm
+    permissions:
+    - groups: [authenticated]
+      rules: [hudson.model.Item.Read]
+  - name: service-app
+    gitlab_id: 3440
+    deploy_type: helm
+    permissions:
+    - groups: [authenticated]
+      rules: [hudson.model.Item.Read]
+
+description: "my description 2"
